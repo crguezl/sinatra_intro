@@ -1,15 +1,15 @@
 require 'sinatra'
 
-set(:even) do |*roles|   # <- notice the splat here
+set(:even) do |*nums|   # <- notice the splat here
   condition do
-    roles.all? { |x| x.to_i % 2 == 0 }
+    nums.all? { |x| x % 2 == 0 }
   end
 end
 
-get "/sum/", :even => [1, 2] do
+get "/sum/?", :even => [1, 2] do
   "1, 2, all even"
 end
 
-get "/sum/", :even => 4 do
+get "/sum/?", :even => 4 do
   "4 is even"
 end
