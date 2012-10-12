@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'sinatra'
-require 'sinatra/authorization'
+#require 'sinatra/authorization'
+require 'sinatra/authentication'
 require 'sinatra/security'
 
 set :authorization_realm, 'Protected zone'
