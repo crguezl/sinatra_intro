@@ -11,13 +11,6 @@ class Flujo
       sleep 1
     end
   end
-
-  def call(env)
-    status, headers, body = @app.call(env)
-    body = body.each.map { |s| s.upcase }
-    [status, headers, body]
-  end
-
 end
 
 get '/' do
