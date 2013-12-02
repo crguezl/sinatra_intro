@@ -3,3 +3,8 @@ desc "run stream.rb using puma server"
 task :stream do
   sh "ruby stream.rb -e production -s puma"
 end
+
+desc "run stream.rb using thin server"
+task :thin do
+  sh "ruby stream.rb -e production -s thin"
+end
