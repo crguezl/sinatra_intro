@@ -6,9 +6,9 @@ end
 
 class Flujo
   def each
-    100.times do |i| 
-      yield "#{i}\n"
-:qa
+    5.times do |i| 
+      yield "#{i}: #{Time.now}\n"
+      sleep 1
     end
   end
 
@@ -21,5 +21,6 @@ class Flujo
 end
 
 get '/' do
+  puts env
   Flujo.new
 end

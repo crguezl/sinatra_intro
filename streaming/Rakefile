@@ -1,0 +1,5 @@
+task :default => :stream
+desc "run stream.rb using puma server"
+task :stream do
+  sh "ruby stream.rb -e production -s puma"
+end
